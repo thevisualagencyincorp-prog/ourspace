@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Luxury Minimalism",
+    "description": "Clean, elegant, high-contrast with gold and black accents.",
+    "colors": ["#000", "#fff", "#d4af37", "#e5e5e5"]
+  },
+  {
+    "name": "Vibrant Creative",
+    "description": "Bold, energetic, playful with bright accent colors.",
+    "colors": ["#336699", "#E1306C", "#27AE60", "#fffbe6"]
+  },
+  {
+    "name": "Earthy Organic",
+    "description": "Natural, grounded, calming with greens and browns.",
+    "colors": ["#8d8741", "#659dbd", "#daad86", "#bc986a"]
+  }
+]
