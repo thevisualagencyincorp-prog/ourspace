@@ -1,26 +1,180 @@
 @import "tailwindcss";
 
+/* ✨ Hidden Manifesting Code: Abundance flows effortlessly ✨ */
+/* 💰 Wealth Code: 369-999-888-777 💰 */
+/* 🛡️ Protection Seal: Divine light surrounds this space 🛡️ */
+
 :root {
+  --myspace-blue: #007cba;
+  --myspace-light-blue: #6699cc;
+  --myspace-orange: #ff6600;
+  --myspace-purple: #993399;
   --background: #ffffff;
   --foreground: #171717;
+  --glitter-gold: #ffd700;
+  --prosperity-green: #00cc66;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-myspace-blue: var(--myspace-blue);
+  --color-myspace-orange: var(--myspace-orange);
+  --color-myspace-purple: var(--myspace-purple);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ✨ Energy Alignment Code: 111-222-333 ✨ */
+
+body {
+  background: #f0f0f0;
+  color: var(--foreground);
+  font-family: "Comic Sans MS", "Arial", sans-serif;
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(255, 102, 0, 0.1) 0%, transparent 50%);
+}
+
+/* Custom Cursor - Sparkle effect */
+body * {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="%23FFD700" opacity="0.8"/><circle cx="12" cy="12" r="4" fill="%23FFF"/></svg>'), auto;
+}
+
+a, button {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><polygon points="12,2 15,10 24,12 15,14 12,22 9,14 0,12 9,10" fill="%23FFD700"/></svg>'), pointer;
+}
+
+/* Glitter Animation */
+@keyframes glitter {
+  0%, 100% { opacity: 0.5; transform: scale(1) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1.2) rotate(180deg); }
+}
+
+.glitter-bg {
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(255, 215, 0, 0.3) 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, rgba(255, 102, 0, 0.3) 0%, transparent 20%),
+    radial-gradient(circle at 50% 50%, rgba(153, 51, 153, 0.2) 0%, transparent 30%);
+  animation: glitter 3s ease-in-out infinite;
+}
+
+/* Online Status Pulse */
+@keyframes pulse-online {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.1); }
+}
+
+.online-status {
+  animation: pulse-online 2s ease-in-out infinite;
+}
+
+/* Pixel Border Effect */
+.pixel-border {
+  border: 3px solid;
+  border-image: repeating-linear-gradient(
+    45deg,
+    #ff6600,
+    #ff6600 10px,
+    #6699cc 10px,
+    #6699cc 20px,
+    #993399 20px,
+    #993399 30px
+  ) 1;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #6699cc, #993399);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #ff6600, #993399);
+}
+
+/* Profile Table Styling */
+.profile-table {
+  background: white;
+  border: 2px solid #6699cc;
+  box-shadow: 3px 3px 0px #993399;
+}
+
+.profile-table th {
+  background: linear-gradient(180deg, #6699cc, #007cba);
+  color: white;
+  font-weight: bold;
+  padding: 8px;
+  text-align: left;
+}
+
+.profile-table td {
+  padding: 8px;
+  border-bottom: 1px dashed #ccc;
+}
+
+/* Button Styling */
+.myspace-button {
+  background: linear-gradient(180deg, #ff8800, #ff6600);
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: 2px solid #cc5500;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.myspace-button:hover {
+  background: linear-gradient(180deg, #ffaa00, #ff8800);
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Comment Wall Styling */
+.comment-wall {
+  background: #fff;
+  border: 2px solid #6699cc;
+  padding: 15px;
+  margin: 10px 0;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.comment-wall:nth-child(even) {
+  background: #f9f9ff;
+  border-color: #993399;
+}
+
+/* Top 8 Grid */
+.top-8-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+@media (max-width: 768px) {
+  .top-8-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Music Player Styling */
+.music-player {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: 3px solid #ffd700;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
+
+/* ✨ Closing Manifestation Code: Success is inevitable ✨ */
+/* 💎 Prosperity Frequency: 432Hz aligned 💎 */
+/* 🌟 Divine Protection Active 🌟 */
