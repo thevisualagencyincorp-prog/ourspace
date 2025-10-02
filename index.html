@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Agency - Kern County Creative Marketing & Design | Ourspace</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
+        
+        :root {
+            /* 2025 Ultra-Modern Color Palette */
+            --neon-pink: #FF10F0;
+            --electric-blue: #00D9FF;
+            --radiant-purple: #B847FF;
+            --vibrant-teal: #00FFC8;
+            --cyber-lime: #CCFF00;
+            --off-black: #0A0A0F;
+            --chromatic-white: #F8F8FF;
+            --dark-gray: #1A1A24;
+            --medium-gray: #2A2A38;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, var(--off-black) 0%, var(--dark-gray) 100%);
+            color: var(--chromatic-white);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        /* Animated Background Sparkles */
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; transform: scale(0); }
+            50% { opacity: 1; transform: scale(1); }
+        }
+        
+        .sparkle {
+            position: fixed;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        /* Header Section */
+        .header {
+            background: linear-gradient(90deg, var(--neon-pink) 0%, var(--electric-blue) 50%, var(--radiant-purple) 100%);
+            padding: 2px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header-content {
+            background: var(--off-black);
+            padding: 3rem 2rem;
+            text-align: center;
+            position: relative;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            background: linear-gradient(90deg, var(--neon-pink), var(--electric-blue), var(--vibrant-teal));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            color: var(--chromatic-white);
+            opacity: 0.9;
+            font-weight: 300;
+        }
+        
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        /* Profile Section - MySpace Style */
+        .profile-section {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .profile-card {
+            background: linear-gradient(135deg, var(--medium-gray) 0%, var(--dark-gray) 100%);
+            border: 2px solid transparent;
+            background-clip: padding-box;
+            border-radius: 12px;
+            padding: 2rem;
+            position: relative;
+        }
+        
+        .profile-card::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            border-radius: 12px;
+            padding: 2px;
+            background: linear-gradient(135deg, var(--neon-pink), var(--electric-blue), var(--radiant-purple));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            z-index: -1;
+        }
+        
+        .about-content h2 {
+            font-size: 2rem;
+            background: linear-gradient(90deg, var(--vibrant-teal), var(--cyber-lime));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+        
+        .about-content p {
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            color: var(--chromatic-white);
+            opacity: 0.9;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .stat {
+            text-align: center;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 900;
+            background: linear-gradient(90deg, var(--neon-pink), var(--electric-blue));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .stat-label {
+            font-size: 0.85rem;
+            opacity: 0.7;
+            margin-top: 0.5rem;
+        }
+        
+        /* Sticky CTA Button */
+        .sticky-cta {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 1000;
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, var(--neon-pink), var(--radiant-purple));
+            color: white;
+            border: none;
+            padding: 1.2rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 8px 32px rgba(255, 16, 240, 0.4);
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 8px 32px rgba(255, 16, 240, 0.4); }
+            50% { transform: scale(1.05); box-shadow: 0 12px 48px rgba(255, 16, 240, 0.6); }
+        }
+        
+        .cta-button:hover {
+            transform: scale(1.1) !important;
+            box-shadow: 0 16px 64px rgba(255, 16, 240, 0.8) !important;
+        }
+        
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 10, 15, 0.95);
+            z-index: 2000;
+            overflow-y: auto;
+            backdrop-filter: blur(10px);
+        }
+        
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+        
+        .modal-content {
+            background: var(--dark-gray);
+            border-radius: 20px;
+            max-width: 800px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            border: 2px solid var(--neon-pink);
+            box-shadow: 0 0 60px rgba(255, 16, 240, 0.3);
+        }
+        
+        .modal-header {
+            background: linear-gradient(135deg, var(--neon-pink), var(--electric-blue), var(--radiant-purple));
+            padding: 2rem;
+            border-radius: 18px 18px 0 0;
+            position: relative;
+        }
+        
+        .modal-header h2 {
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+        
+        .modal-header p {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+        }
+        
+        .close-button {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            font-size: 2rem;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .close-button:hover {
+            background: rgba(255, 255, 255, 0.4);
+            transform: rotate(90deg);
+        }
+        
+        /* Form Styling */
+        .form-container {
+            padding: 2rem;
+        }
+        
+        .form-section {
+            margin-bottom: 2rem;
+        }
+        
+        .form-section h3 {
+            font-size: 1.5rem;
+            background: linear-gradient(90deg, var(--vibrant-teal), var(--cyber-lime));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--chromatic-white);
+            font-size: 0.95rem;
+        }
+        
+        label .required {
+            color: var(--neon-pink);
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 0.9rem 1.2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            color: var(--chromatic-white);
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+        
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: var(--electric-blue);
+            background: rgba(0, 217, 255, 0.1);
+            box-shadow: 0 0 20px rgba(0, 217, 255, 0.2);
+        }
+        
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        
+        /* Checkbox Group */
+        .checkbox-group {
+            display: grid;
+            gap: 0.8rem;
+        }
+        
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 0.8rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .checkbox-item:hover {
+            background: rgba(255, 255, 255, 0.08);
+        }
+        
+        .checkbox-item input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            accent-color: var(--neon-pink);
+        }
+        
+        .checkbox-item label {
+            margin: 0;
+            cursor: pointer;
+            font-weight: 400;
+        }
+        
+        /* Radio Group */
+        .radio-group {
+            display: grid;
+            gap: 0.8rem;
+        }
+        
+        .radio-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 0.8rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .radio-item:hover {
+            background: rgba(255, 255, 255, 0.08);
+        }
+        
+        .radio-item input[type="radio"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            accent-color: var(--electric-blue);
+        }
+        
+        .radio-item label {
+            margin: 0;
+            cursor: pointer;
+            font-weight: 400;
+        }
+        
+        /* Submit Button */
+        .submit-button {
+            width: 100%;
+            background: linear-gradient(135deg, var(--neon-pink), var(--radiant-purple), var(--electric-blue));
+            color: white;
+            border: none;
+            padding: 1.2rem 2rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border-radius: 12px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+        
+        .submit-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 48px rgba(255, 16, 240, 0.6);
+        }
+        
+        .submit-button:active {
+            transform: translateY(0);
+        }
+        
+        /* Success Message */
+        .success-message {
+            display: none;
+            background: linear-gradient(135deg, var(--vibrant-teal), var(--cyber-lime));
+            color: var(--off-black);
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .success-message.active {
+            display: block;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .profile-section {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .modal-content {
+                margin: 1rem;
+            }
+            
+            .sticky-cta {
+                bottom: 1rem;
+                right: 1rem;
+            }
+            
+            .cta-button {
+                padding: 1rem 1.5rem;
+                font-size: 0.9rem;
+            }
+            
+            .stats {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Background Sparkles -->
+    <div id="sparkles-container"></div>
+    
+    <!-- Header -->
+    <div class="header">
+        <div class="header-content">
+            <h1>The Agency</h1>
+            <p class="tagline">Kern County Creative Marketing & Design</p>
+        </div>
+    </div>
+    
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Profile Section -->
+        <div class="profile-section">
+            <!-- Sidebar -->
+            <div class="profile-card">
+                <h3 style="margin-bottom: 1rem; font-size: 1.3rem;">Welcome to Our Space!</h3>
+                <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                    We're a viral, in-demand creative agency crafting bold campaigns that turn brands into cultural phenomena.
+                </p>
+                <div style="padding: 1rem; background: rgba(255, 255, 255, 0.05); border-radius: 8px; margin-bottom: 1rem;">
+                    <div style="font-size: 0.85rem; opacity: 0.7; margin-bottom: 0.3rem;">📍 Location</div>
+                    <div style="font-weight: 600;">Kern County, CA</div>
+                </div>
+                <div style="padding: 1rem; background: rgba(255, 255, 255, 0.05); border-radius: 8px; margin-bottom: 1rem;">
+                    <div style="font-size: 0.85rem; opacity: 0.7; margin-bottom: 0.3rem;">✨ Status</div>
+                    <div style="font-weight: 600; color: var(--vibrant-teal);">Taking New Clients</div>
+                </div>
+                <div style="padding: 1rem; background: rgba(255, 255, 255, 0.05); border-radius: 8px;">
+                    <div style="font-size: 0.85rem; opacity: 0.7; margin-bottom: 0.3rem;">🎨 Specialties</div>
+                    <div style="font-weight: 600; font-size: 0.9rem; line-height: 1.6;">
+                        Brand Strategy<br>
+                        Viral Campaigns<br>
+                        Creative Direction<br>
+                        Digital Marketing
+                    </div>
+                </div>
+            </div>
+            
+            <!-- About Section -->
+            <div class="about-content">
+                <h2>About The Agency</h2>
+                <p>
+                    We don't just create campaigns—we create cultural moments. Our team of visionaries, 
+                    strategists, and creatives specializes in turning bold ideas into viral sensations.
+                </p>
+                <p>
+                    From startups looking to disrupt industries to established brands ready to shake things up, 
+                    we partner with ambitious clients who aren't afraid to stand out, be different, and make noise.
+                </p>
+                <p>
+                    Our approach blends data-driven strategy with audacious creativity, resulting in campaigns 
+                    that don't just get noticed—they get talked about, shared, and remembered.
+                </p>
+                
+                <!-- Stats -->
+                <div class="stats">
+                    <div class="stat">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Brands Elevated</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">100M+</div>
+                        <div class="stat-label">Impressions</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Awards Won</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Sticky CTA -->
+    <div class="sticky-cta">
+        <button class="cta-button" onclick="openModal()">
+            🚀 Let's Create Magic
+        </button>
+    </div>
+    
+    <!-- Contact Form Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close-button" onclick="closeModal()">&times;</button>
+                <h2>Let's Make It Happen</h2>
+                <p>Tell us about your brand's biggest dreams and wildest ideas</p>
+            </div>
+            
+            <div class="form-container">
+                <div class="success-message" id="successMessage">
+                    🎉 Amazing! We've received your submission. Our team will be in touch within 24 hours to start bringing your vision to life!
+                </div>
+                
+                <form id="contactForm" onsubmit="handleSubmit(event)">
+                    <!-- Basic Information -->
+                    <div class="form-section">
+                        <h3>📋 Basic Information</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Your Name <span class="required">*</span></label>
+                                <input type="text" id="name" name="name" required placeholder="Jane Doe">
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Company/Brand <span class="required">*</span></label>
+                                <input type="text" id="company" name="company" required placeholder="Acme Inc.">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" required placeholder="jane@acme.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="website">Website (Optional)</label>
+                                <input type="url" id="website" name="website" placeholder="https://acme.com">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project Details -->
+                    <div class="form-section">
+                        <h3>🎯 Project Details</h3>
+                        <div class="form-group">
+                            <label for="projectType">What type of project do you have in mind? <span class="required">*</span></label>
+                            <div class="checkbox-group">
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="branding" name="projectType" value="branding">
+                                    <label for="branding">Brand Strategy & Identity</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="campaign" name="projectType" value="campaign">
+                                    <label for="campaign">Marketing Campaign</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="social" name="projectType" value="social">
+                                    <label for="social">Social Media & Content</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="digital" name="projectType" value="digital">
+                                    <label for="digital">Digital Advertising</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="creative" name="projectType" value="creative">
+                                    <label for="creative">Creative Direction</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="other" name="projectType" value="other">
+                                    <label for="other">Other (tell us below!)</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="goals">What are your primary goals? <span class="required">*</span></label>
+                            <textarea id="goals" name="goals" required placeholder="e.g., Increase brand awareness, launch new product, drive sales, build community..."></textarea>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="timeline">Ideal Timeline <span class="required">*</span></label>
+                                <select id="timeline" name="timeline" required>
+                                    <option value="">Select timeline...</option>
+                                    <option value="asap">ASAP - Ready to Start Now</option>
+                                    <option value="1-2months">1-2 Months</option>
+                                    <option value="3-6months">3-6 Months</option>
+                                    <option value="flexible">Flexible</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="budget">Budget Range <span class="required">*</span></label>
+                                <select id="budget" name="budget" required>
+                                    <option value="">Select range...</option>
+                                    <option value="under25k">Under $25K</option>
+                                    <option value="25k-50k">$25K - $50K</option>
+                                    <option value="50k-100k">$50K - $100K</option>
+                                    <option value="100k-250k">$100K - $250K</option>
+                                    <option value="250k+">$250K+</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Brand Discovery -->
+                    <div class="form-section">
+                        <h3>✨ Brand Discovery</h3>
+                        <div class="form-group">
+                            <label for="brandKeywords">Describe your brand in 3-5 keywords</label>
+                            <input type="text" id="brandKeywords" name="brandKeywords" placeholder="e.g., Bold, Innovative, Sustainable, Authentic, Disruptive">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="desiredOutcomes">What does success look like for you? <span class="required">*</span></label>
+                            <textarea id="desiredOutcomes" name="desiredOutcomes" required placeholder="Paint us a picture of your ideal outcome. Be specific!"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="painPoints">What challenges or pain points are you facing?</label>
+                            <textarea id="painPoints" name="painPoints" placeholder="What's keeping you up at night? What obstacles are you trying to overcome?"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="priorExperiences">Have you worked with agencies before? What worked/didn't work?</label>
+                            <textarea id="priorExperiences" name="priorExperiences" placeholder="Share your past experiences—the good, the bad, and what you're looking for this time."></textarea>
+                        </div>
+                    </div>
+                    
+                    <!-- Creative Spark -->
+                    <div class="form-section">
+                        <h3>🌟 The Creative Spark</h3>
+                        <div class="form-group">
+                            <label for="biggestDream">What's your brand's biggest dream? <span class="required">*</span></label>
+                            <textarea id="biggestDream" name="biggestDream" required placeholder="No dream is too big! Tell us your wildest vision for your brand. Where do you see it in 5 years? What impact do you want to make?"></textarea>
+                        </div>
+                    </div>
+                    
+                    <!-- Client Fit -->
+                    <div class="form-section">
+                        <h3>🔥 Let's See If We're a Match</h3>
+                        <div class="form-group">
+                            <label>Are you open to bold, unconventional, and potentially viral ideas? <span class="required">*</span></label>
+                            <div class="radio-group">
+                                <div class="radio-item">
+                                    <input type="radio" id="boldYes" name="boldIdeas" value="absolutely" required>
+                                    <label for="boldYes">Absolutely! Bring on the bold.</label>
+                                </div>
+                                <div class="radio-item">
+                                    <input type="radio" id="boldMaybe" name="boldIdeas" value="open">
+                                    <label for="boldMaybe">Open to it, with some boundaries.</label>
+                                </div>
+                                <div class="radio-item">
+                                    <input type="radio" id="boldNo" name="boldIdeas" value="conservative">
+                                    <label for="boldNo">Prefer to play it safe and conservative.</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>How would you describe your brand's personality?</label>
+                            <div class="checkbox-group">
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="edgy" name="personality" value="edgy">
+                                    <label for="edgy">Edgy & Disruptive</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="playful" name="personality" value="playful">
+                                    <label for="playful">Playful & Fun</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="sophisticated" name="personality" value="sophisticated">
+                                    <label for="sophisticated">Sophisticated & Premium</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="authentic" name="personality" value="authentic">
+                                    <label for="authentic">Authentic & Real</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="innovative" name="personality" value="innovative">
+                                    <label for="innovative">Innovative & Forward-Thinking</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- How They Heard -->
+                    <div class="form-section">
+                        <h3>🎧 How Did You Hear About Us?</h3>
+                        <div class="form-group">
+                            <select id="referralSource" name="referralSource">
+                                <option value="">Select an option...</option>
+                                <option value="google">Google Search</option>
+                                <option value="social">Social Media</option>
+                                <option value="referral">Referral from a Friend/Colleague</option>
+                                <option value="portfolio">Saw Your Work</option>
+                                <option value="article">Article or Press</option>
+                                <option value="event">Event or Conference</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="additionalInfo">Anything else we should know?</label>
+                            <textarea id="additionalInfo" name="additionalInfo" placeholder="Share any additional context, inspiration, or questions you have for us."></textarea>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="submit-button">
+                        🚀 Submit & Let's Get Started
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Sparkle Animation
+        function createSparkles() {
+            const container = document.getElementById('sparkles-container');
+            const colors = ['#FF10F0', '#00D9FF', '#B847FF', '#00FFC8', '#CCFF00'];
+            
+            for (let i = 0; i < 30; i++) {
+                const sparkle = document.createElement('div');
+                sparkle.className = 'sparkle';
+                sparkle.style.left = Math.random() * 100 + '%';
+                sparkle.style.top = Math.random() * 100 + '%';
+                sparkle.style.background = colors[Math.floor(Math.random() * colors.length)];
+                sparkle.style.animationDelay = Math.random() * 3 + 's';
+                sparkle.style.animationDuration = (Math.random() * 2 + 2) + 's';
+                sparkle.style.animation = 'sparkle ' + (Math.random() * 2 + 2) + 's infinite';
+                container.appendChild(sparkle);
+            }
+        }
+        
+        // Modal Controls
+        function openModal() {
+            document.getElementById('contactModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeModal() {
+            document.getElementById('contactModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Close modal on outside click
+        document.getElementById('contactModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+        
+        // Form Submission
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(event.target);
+            const data = {};
+            
+            // Process form data
+            for (let [key, value] of formData.entries()) {
+                if (data[key]) {
+                    if (Array.isArray(data[key])) {
+                        data[key].push(value);
+                    } else {
+                        data[key] = [data[key], value];
+                    }
+                } else {
+                    data[key] = value;
+                }
+            }
+            
+            // Log form data (in production, this would be sent to a server)
+            console.log('Form submitted:', data);
+            
+            // Show success message
+            document.getElementById('successMessage').classList.add('active');
+            document.getElementById('contactForm').style.display = 'none';
+            
+            // Reset form after delay
+            setTimeout(() => {
+                document.getElementById('contactForm').reset();
+                document.getElementById('successMessage').classList.remove('active');
+                document.getElementById('contactForm').style.display = 'block';
+                closeModal();
+            }, 3000);
+            
+            return false;
+        }
+        
+        // Initialize sparkles on page load
+        window.addEventListener('load', createSparkles);
+        
+        // Close modal with ESC key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
