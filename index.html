@@ -7,17 +7,75 @@
   <meta name="description" content="Bakersfield & LA's creative business besties. Full service advertising agency in the Tehachapi Mountains.">
   <meta name="keywords" content="Bakersfield advertising agency, LA marketing agency, Tehachapi creative agency, digital marketing, branding, ad campaigns, influencer marketing, California agency, social media ads, creative studio, award-winning advertising, marketing Tehachapi, marketing Bakersfield, advertising LA, creative direction, SEO, content creation, agency portfolio, media buying, brand strategy, monthly creative membership, art department subscription">
   <style>
-    .profile-avatar {
-      width: 110px;
-      height: 110px;
-      border: 3px solid #e5e5e5;
-      border-radius: 8px;
-      box-shadow: 0 4px 16px #00339977;
-      object-fit: cover;
-      display: block;
-      margin: 0 auto;
-    }
-    /* ...rest of Myspace-style CSS unchanged... */
+    body { background: url('https://i.imgur.com/Yw6XvYc.png') repeat fixed; font-family: Verdana, Arial, Helvetica, sans-serif; color: #222; margin: 0; padding: 0; }
+    a { color: #003399; text-decoration: underline; }
+    a:hover { color: #002060; }
+    .myspace-ad-top { width: 1000px; margin: 18px auto 0 auto; text-align: center; z-index: 100; }
+    .myspace-wrapper { width: 1000px; margin: 8px auto 40px auto; background: #fff; border: 3px solid #b5b5b5; box-shadow: 0 0 36px #00339922; display: flex; min-height: 900px; border-radius: 14px; overflow: hidden; }
+    .profile-sidebar { width: 290px; background: #e7eaf4 url('https://i.imgur.com/XrXwnHQ.png') repeat-x top center; border-right: 2.5px solid #b5b5b5; padding: 0 0 36px 0; }
+    .profile-header { background: #003399 url('https://i.imgur.com/E7lGyXz.png') repeat-x top center; padding: 22px 0 18px 0; text-align: center; border-bottom: 2px solid #b5b5b5; margin-bottom: 6px; position:relative; }
+    .profile-avatar { width: 182px; height: 182px; border: 3px solid #e5e5e5; border-radius: 10px; box-shadow: 0 4px 30px #00339977; object-fit: cover; background: #fff; margin: 0 auto 2px auto; display: block; }
+    .profile-name { font-size: 1.45em; font-weight: bold; color: #fff; margin-top: 14px; font-family: Arial, Helvetica, sans-serif; text-shadow: 0 2px 8px #00339999; letter-spacing: 1.1px; text-transform: uppercase; }
+    .profile-status { margin: 12px auto 0 auto; display: inline-block; background: #c7e6ff; color: #002060; border: 1.5px solid #003399; border-radius: 10px; padding: 5px 22px; font-size: 1.03em; font-weight: bold; letter-spacing: 0.4px; box-shadow: 0 2px 9px #00339930; }
+    .profile-links { margin: 19px auto 0 auto; width: 90%; background: #fff; border: 2px solid #b5b5b5; border-radius: 7px; box-shadow: 0 2px 13px #00339922; padding: 13px 16px 11px 16px; font-size: 1.15em; text-align: center; }
+    .profile-links a { color: #003399; text-decoration: none; display: inline-block; margin: 0 7px 7px 0; font-weight: bold; font-size: 1em; background: #e5e5e5; border: 1.5px solid #b5b5b5; border-radius: 5px; padding: 5px 13px; transition: background 0.19s; box-shadow: 0 1px 6px #00339915; }
+    .profile-links a:hover { background: #3366cc; color: #fff; }
+    .profile-edit-btn { display: inline-block; margin: 12px 0 0 0; padding: 4px 18px; font-size: 1em; background: #e5e5e5; color: #002060; border-radius: 8px; border: 1.5px solid #003399; text-decoration: none; font-weight: bold; letter-spacing: 0.6px; box-shadow: 0 3px 12px #00339922; }
+    .profile-edit-btn:hover { background: #003399; color: #fff; }
+    .blinky { display:block; margin:18px auto 0 auto; width:110px; }
+    .profile-box, .mood-bulletin, .online-friends { margin: 19px auto 0 auto; width: 90%; background: #fff; border-radius: 7px; box-shadow: 0 2px 13px #00339922; padding: 13px 16px 11px 16px; font-size: 1.07em; border: 2px solid #b5b5b5; }
+    .profile-box h3 { margin: 0 0 7px 0; font-size: 1.07em; color: #002060; border-bottom: 1px solid #b5b5b5; font-family: Arial, Helvetica, sans-serif; letter-spacing: 0.2px; }
+    .mood-bulletin { background: #fffbe5; border-color: #ffcc00; color: #a67c00; box-shadow: 0 1px 7px #ffe97a44; font-size: 1em; }
+    .online-friends { background: #f0fff5; border: 2px solid #00cc66; color: #008844; box-shadow: 0 1px 6px #00cc6644; font-size: 1em; }
+    .online-friends h3 { margin: 0 0 7px 0; font-size: 1.05em; color: #008844; border-bottom: 1px solid #00cc66; font-family: Arial, Helvetica, sans-serif; }
+    .main-feed { flex: 1; padding: 40px 36px 24px 36px; background: #f8faff url('https://i.imgur.com/Sx6y3Tl.png') top center repeat-x; border-radius: 0 12px 12px 0; }
+    .feed-nav { margin-bottom: 24px; border-bottom: 2px solid #e5e5e5; padding-bottom: 10px; text-align: left; font-size: 1.14em; }
+    .feed-nav a { color: #003399; text-decoration: none; margin-right: 22px; font-weight: bold; font-size: 1.08em; padding: 5px 14px; border-radius: 8px; transition: background 0.19s; background: #e5e5e5; border: 1.5px solid #b5b5b5; }
+    .feed-nav a:hover { background: #3366cc; color: #fff; }
+    h2 { font-family: Arial, Helvetica, sans-serif; color: #002060; margin-bottom: 7px; margin-top: 32px; font-size: 1.32em; border-bottom: 1px solid #e5e5e5; letter-spacing: 0.2px; }
+    .top8-area { margin-bottom: 23px; }
+    .top8-grid { display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 7px; }
+    .top8-card { width: 110px; background: #f3f8fd; border: 2px solid #3366cc; border-radius: 7px; box-shadow: 0 2px 11px #00339922; text-align: center; padding: 10px 7px 8px 7px; font-size: 0.98em; }
+    .top8-card img { width: 48px; height: 48px; border-radius: 8px; border: 2px solid #e5e5e5; box-shadow: 0 1px 8px #00339922; margin-bottom: 5px; object-fit: cover; }
+    .top8-card .username { font-weight: bold; color: #003399; font-size: 1.07em; }
+    .top8-card .tagline { color: #3366cc; font-size: 0.95em; }
+    .top8-card .adbot { color: #ff9900; }
+    .testimonials-wall { background: #f7fafd; border: 2px dashed #003399; border-radius: 8px; padding: 16px 18px; margin-bottom: 27px; box-shadow: 0 2px 17px #00339922; font-size: 1.05em; }
+    .testimonial { border-bottom: 1px dotted #3366cc; margin-bottom: 14px; padding-bottom: 10px; color: #003399; font-size: 1.01em; }
+    .testimonial:last-child { border-bottom: none; }
+    .gallery-area { margin:40px 0 36px 0; }
+    .gallery-area h2 { color:#003399; border-bottom:1px solid #b5b5b5; font-family:Arial,Helvetica,sans-serif;}
+    .gallery-grid { display:flex; flex-wrap:wrap; gap:22px; }
+    .gallery-card { background:#f3f8fd; border:2px solid #3366cc; border-radius:7px; padding:11px 14px; box-sizing:border-box; margin-bottom:9px; }
+    .gallery-card.video { width:260px; }
+    .gallery-card.logo { width:140px; text-align:center;}
+    .gallery-card.website { width:230px;}
+    .gallery-card.ad { width:210px;}
+    .gallery-card img, .gallery-card iframe { border-radius:7px; margin-bottom:8px; max-width:100%; object-fit:cover; }
+    .insta-section { margin: 38px 0 28px 0; }
+    .insta-header { color: #003399; font-size: 1.14em; font-weight: bold; margin-bottom: 9px; letter-spacing: 1px; }
+    .insta-embed { margin-bottom: 7px; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 13px #00339922; width: 100%; max-width: 490px; min-height: 320px; border: 2px solid #003399; background: #fff; }
+    .insta-footer { margin-top: 10px; color: #003399; font-size: 1.01em; }
+    .newsletter-section { background: #f8fafc; border: 2px solid #3366cc; border-radius: 9px; padding: 19px 21px 10px 21px; margin-bottom: 22px; box-shadow: 0 2px 13px #00339922; }
+    .newsletter-section label { color: #002060; font-weight: bold; }
+    .newsletter-section input[type="email"] { padding: 7px; border-radius: 8px; border: 1.5px solid #3366cc; font-size: 1em; width: 54%; margin-right: 8px; background: #fff; }
+    .newsletter-section button { background: #003399; color: #fff; border: none; border-radius: 8px; padding: 7px 16px; font-size: 1em; font-weight: bold; cursor: pointer; transition: background 0.22s; }
+    .newsletter-section button:hover { background: #002060; }
+    .newsletter-archive { margin-top: -10px; margin-bottom: 24px; }
+    .newsletter-archive h4 { color: #002060; margin: 10px 0 6px 0; }
+    .newsletter-archive ul { padding-left: 22px; color: #003399; font-size: 1em;}
+    .intake-section { margin-bottom: 38px; }
+    .intake-form label { display: block; margin-bottom: 10px; font-size: 1em; color: #003399; }
+    .intake-form input[type="text"], .intake-form input[type="email"], .intake-form input[type="url"], .intake-form input[type="date"], .intake-form textarea, .intake-form select { width: 88%; padding: 6px; margin-top: 3px; margin-bottom: 7px; border-radius: 5px; border: 1px solid #3366cc; font-size: 1em; background: #f7fafd; }
+    .intake-form textarea { min-height: 44px; }
+    .intake-form button { background: #003399; color: #fff; padding: 8px 24px; border: none; border-radius: 8px; font-size: 1.1em; font-weight: bold; cursor: pointer; margin-top: 8px; transition: background 0.2s; }
+    .intake-form button:hover { background: #002060; }
+    .intake-form fieldset { border:none; margin: 10px 0 6px 0; padding:0;}
+    .intake-form legend { font-weight: bold; color: #003399; }
+    .form-footer { margin-top: 8px; font-size: 0.96em; color: #002060; }
+    @media (max-width: 1150px) { .myspace-wrapper, .myspace-ad-top { width: 100vw;} }
+    @media (max-width: 900px) { .myspace-wrapper { flex-direction: column; border-radius: 0; } .profile-sidebar { width: 100vw; border-right: none; border-bottom: 2px solid #b5b5b5;} .main-feed { padding: 22px 4vw 24px 4vw; } }
+    @media (max-width: 600px) { .main-feed { padding: 9px 2vw 18px 2vw; } .top8-grid { gap: 9px; } .top8-card { width: 95px; } .newsletter-section, .newsletter-archive, .testimonials-wall { padding: 10px 7px; } .gallery-grid { gap: 12px; } .gallery-card { width: 98vw!important; min-width:0; }
   </style>
   <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
 </head>
@@ -29,21 +87,78 @@
   </div>
 <div class="myspace-wrapper">
   <aside class="profile-sidebar">
-    <div class="myspace-ad-side">
-      <a href="https://youragencyadlink.com" target="_blank">
-        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=160&q=80" alt="Sidebar Ad" style="border:2px solid #3366cc; border-radius:5px; width:160px; height:600px; object-fit:cover;">
-      </a>
-    </div>
     <div class="profile-header">
-      <img class="profile-avatar" src="profile.jpg" alt="The Agency Profile Image" />
+      <img class="profile-avatar" src="profile.jpg" alt="The Agency Profile Photo" />
       <div class="profile-name">THE AGENCY</div>
       <div class="profile-status">● Online Now!</div>
       <a href="#contact" class="profile-edit-btn">Edit Profile</a>
     </div>
-    <!-- ...sidebar links, blinky gif, mood/bulletin, etc. unchanged... -->
+    <div class="profile-links">
+      <a href="#top8">Top 8</a>
+      <a href="#wall">Wall</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#instagram">Instagram</a>
+      <a href="#newsletter">Newsletter</a>
+      <a href="#contact">Contact</a>
+      <a href="https://the-visual-archive.com/" target="_blank">Visual Archive</a>
+    </div>
+    <div class="blinky">
+      <img src="https://media.giphy.com/media/9J7tdYltWyXIY/giphy.gif" alt="Under Construction" style="width:110px;">
+    </div>
+    <div class="profile-box">
+      <h3>About</h3>
+      <p>Full service advertising agency in the Tehachapi Mountains, serving Bakersfield, LA, & beyond.<br>Your creative business besties. Results, not just ideas.</p>
+    </div>
+    <div class="mood-bulletin">
+      <div style="margin-bottom:6px;">
+        <img src="https://media.giphy.com/media/1BdIPqBrt1Eoy/giphy.gif" alt="Mood" style="vertical-align:middle; width:24px; height:24px;">
+        <span style="color:#003399;font-weight:bold;">Feeling: Inspired to create.</span>
+      </div>
+      <b>Bulletin:</b> New case study dropped! <a href="#gallery" style="color:#003399;">See our viral ad work</a>.
+    </div>
+    <div class="profile-box">
+      <h3>Manifesto</h3>
+      <ul style="padding-left:18px; margin:0;">
+        <li>🌄 Local heart, global hustle.</li>
+        <li>💡 Big ideas, bigger results.</li>
+        <li>🦄 Manifest magic, protect the vision.</li>
+        <li>🚀 Abundance only—no budget fear here!</li>
+      </ul>
+    </div>
+    <div class="profile-box">
+      <h3>Contact</h3>
+      <p>Email: <a href="mailto:hello@agency.com">hello@agency.com</a><br>DM: <a href="https://instagram.com/meet_the_agency" target="_blank">@meet_the_agency</a></p>
+    </div>
+    <div class="online-friends">
+      <h3>Online Friends</h3>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;">
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=32&q=80" style="width:32px;height:32px;border-radius:6px;border:1.5px solid #00cc66;">
+        <img src="https://images.unsplash.com/photo-1508214751196-bc89e2bee139?auto=format&fit=crop&w=32&q=80" style="width:32px;height:32px;border-radius:6px;border:1.5px solid #00cc66;">
+        <img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=32&q=80" style="width:32px;height:32px;border-radius:6px;border:1.5px solid #00cc66;">
+        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=32&q=80" style="width:32px;height:32px;border-radius:6px;border:1.5px solid #00cc66;">
+      </div>
+      <div style="font-size:0.9em;color:#00cc66;margin-top:4px;">4 friends online now</div>
+    </div>
+    <div class="profile-box profile-socials">
+      <a href="https://instagram.com/meet_the_agency" target="_blank">Instagram</a>
+      <a href="https://www.facebook.com/meettheagencyllc" target="_blank">Facebook</a>
+      <a href="https://the-visual-archive.com/" target="_blank">Visual Archive</a>
+    </div>
+    <div style="display:none">
+      <!-- 88888888 Wealth | 333333 Protection | Obsession: Clients become superfans -->
+    </div>
   </aside>
   <main class="main-feed">
-    <!-- ...all main content unchanged (Top 8, Gallery, Instagram, Newsletter, Intake Form, etc.)... -->
+    <nav class="feed-nav">
+      <a href="#top8">Top 8</a>
+      <a href="#wall">Wall</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#instagram">Instagram</a>
+      <a href="#newsletter">Newsletter</a>
+      <a href="#contact">Contact</a>
+      <a href="https://the-visual-archive.com/" target="_blank">Visual Archive</a>
+    </nav>
+    <!-- ...rest of main content unchanged... -->
   </main>
 </div>
 </body>
