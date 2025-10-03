@@ -82,26 +82,6 @@
       margin-bottom: 11px;
       border: 1px solid #003399;
     }
-    #profile-links {
-      margin: 22px 0 0 0;
-    }
-    #profile-links a {
-      margin-right: 18px;
-      color: #fff;
-      background: #3366cc;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.09em;
-      padding: 6px 18px;
-      border-radius: 8px;
-      border: 1px solid #fff;
-      box-shadow: 0 2px 6px #00339944;
-      transition: background 0.18s;
-    }
-    #profile-links a:hover {
-      background: #003399;
-      color: #ffcc00;
-    }
     #main-content {
       display: flex;
       min-height: 780px;
@@ -143,27 +123,6 @@
       font-size: 1.18em;
       border-bottom: 1px solid #e5e5e5;
     }
-    .top8-grid {
-      display: flex; flex-wrap: wrap; gap: 14px;
-      margin-bottom: 7px;
-    }
-    .top8-card {
-      width: 108px;
-      background: #f3f8fd;
-      border: 1px solid #3366cc;
-      border-radius: 6px;
-      text-align: center;
-      padding: 8px 6px 7px 6px;
-      font-size: 0.97em;
-    }
-    .top8-card img {
-      width: 44px; height: 44px; border-radius: 7px;
-      border: 1px solid #e5e5e5;
-      margin-bottom: 4px;
-      object-fit: cover;
-    }
-    .top8-card .username { font-weight: bold; color: #003399; font-size: 1.02em; }
-    .top8-card .tagline { color: #3366cc; font-size: 0.93em; }
     .testimonials-wall {
       background: #f7fafd;
       border: 1px dotted #3366cc;
@@ -245,36 +204,31 @@
       transition: background 0.22s;
     }
     .newsletter-section button:hover { background: #002060; }
-    .intake-section { margin-bottom: 34px; }
-    .intake-form label {
-      display: block; margin-bottom: 8px; font-size: 0.99em; color: #003399;
+    .contact-section {
+      background: #f8fafc;
+      border: 1px solid #3366cc;
+      border-radius: 7px;
+      padding: 14px 20px 10px 20px;
+      margin-bottom: 18px;
     }
-    .intake-form input[type="text"], .intake-form input[type="email"], .intake-form input[type="url"], .intake-form input[type="date"], .intake-form textarea, .intake-form select {
-      width: 86%; padding: 5px; margin-top: 2px; margin-bottom: 5px;
-      border-radius: 5px; border: 1px solid #3366cc;
+    .contact-section label { color: #003399; font-weight: bold; }
+    .contact-section input, .contact-section textarea, .contact-section select {
+      width: 97%; padding: 7px; margin-top: 3px; margin-bottom: 9px;
+      border-radius: 6px; border: 1px solid #3366cc;
       font-size: 1em; background: #f7fafd;
     }
-    .intake-form textarea { min-height: 38px; }
-    .intake-form button {
+    .contact-section button {
       background: #003399;
       color: #fff;
-      padding: 7px 19px;
       border: none;
       border-radius: 6px;
+      padding: 7px 18px;
       font-size: 1em;
       font-weight: bold;
       cursor: pointer;
-      margin-top: 7px;
-      transition: background 0.2s;
+      transition: background 0.22s;
     }
-    .intake-form button:hover { background: #002060; }
-    .intake-form fieldset { border:none; margin: 8px 0 5px 0; padding:0;}
-    .intake-form legend { font-weight: bold; color: #003399; }
-    .form-footer {
-      margin-top: 7px;
-      font-size: 0.93em;
-      color: #003399;
-    }
+    .contact-section button:hover { background: #002060; }
     .blinky {
       display:block;
       margin:12px auto 0 auto;
@@ -293,15 +247,6 @@
     <div id="profile-info">
       <div id="profile-name">THE AGENCY</div>
       <div id="status">● Online Now!</div>
-      <div id="profile-links">
-        <a href="#top8">Top 8</a>
-        <a href="#wall">Wall</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#instagram">Instagram</a>
-        <a href="#newsletter">Newsletter</a>
-        <a href="#contact">Contact</a>
-        <a href="https://the-visual-archive.com/" target="_blank">Visual Archive</a>
-      </div>
     </div>
   </div>
   <div id="main-content">
@@ -353,60 +298,6 @@
       </div>
     </aside>
     <main id="main-feed">
-      <nav class="feed-nav">
-        <a href="#top8">Top 8</a>
-        <a href="#wall">Wall</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#instagram">Instagram</a>
-        <a href="#newsletter">Newsletter</a>
-        <a href="#contact">Contact</a>
-        <a href="https://the-visual-archive.com/" target="_blank">Visual Archive</a>
-      </nav>
-      <section id="top8" class="top8-area">
-        <h2>Top 8 Friends & Collaborators</h2>
-        <div class="top8-grid">
-          <div class="top8-card">
-            <img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=46&q=80" alt="Jessica R.">
-            <div class="username">brandboss_jess</div>
-            <div class="tagline">“You made us unforgettable.”</div>
-          </div>
-          <div class="top8-card">
-            <img src="https://images.unsplash.com/photo-1508214751196-bc89e2bee139?auto=format&fit=crop&w=46&q=80" alt="Eli M.">
-            <div class="username">kerncountykingpin</div>
-            <div class="tagline">“Bakersfield’s buzz-makers!”</div>
-          </div>
-          <div class="top8-card">
-            <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=46&q=80" alt="Zoe W.">
-            <div class="username">adwizard_zoe</div>
-            <div class="tagline">“Never seen creative like this.”</div>
-          </div>
-          <div class="top8-card">
-            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=46&q=80" alt="Tyler S.">
-            <div class="username">socialsavant_ty</div>
-            <div class="tagline">“TikTok went wild.”</div>
-          </div>
-          <div class="top8-card">
-            <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=46&q=80" alt="Maya L.">
-            <div class="username">LA_creativequeen</div>
-            <div class="tagline">“You just get LA brands.”</div>
-          </div>
-          <div class="top8-card">
-            <img src="https://images.unsplash.com/photo-1482062364825-616fd23b8fc1?auto=format&fit=crop&w=46&q=80" alt="Emily F.">
-            <div class="username">mountainmuse_em</div>
-            <div class="tagline">“Fresh, local, and innovative.”</div>
-          </div>
-          <div class="top8-card">
-            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=46&q=80" alt="Rico V.">
-            <div class="username">vidvibes_rico</div>
-            <div class="tagline">“Our campaign converted!”</div>
-          </div>
-          <div class="top8-card">
-            <img src="https://images.unsplash.com/photo-1519985176271-adb1088fa94c?auto=format&fit=crop&w=46&q=80" alt="Ari P.">
-            <div class="username">pixelpal_ari</div>
-            <div class="tagline">“Always two steps ahead.”</div>
-          </div>
-        </div>
-      </section>
       <section id="wall" class="testimonials-wall">
         <h2>Wall: Client Reviews</h2>
         <div class="testimonial"><strong>Jessica R. (brandboss_jess):</strong> The Agency helped us tell our story in a way that actually connects. We’re getting the right kind of attention now.</div>
@@ -453,12 +344,17 @@
       <section id="instagram" class="insta-section">
         <div class="insta-header">Our Latest on <span style="color:#003399;">@meet_the_agency</span></div>
         <div class="insta-embed" style="padding:0;">
-          <iframe src="//lightwidget.com/widgets/1788fd5e4a325672bbbd7c5c16fe85e3.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+          <iframe src="https://lightwidget.com/widgets/1788fd5e4a325672bbbd7c5c16fe85e3.html"
+            title="Instagram feed"
+            scrolling="no"
+            allowtransparency="true"
+            class="lightwidget-widget"
+            style="width:100%;height:540px;border:0;overflow:hidden"></iframe>
         </div>
         <div class="insta-footer">
-          <a href="https://instagram.com/meet_the_agency" target="_blank" style="color:#003399; text-decoration:underline; font-weight:bold;">Follow us on Instagram</a>
+          <a href="https://instagram.com/meet_the_agency" target="_blank" style="color:#003399;text-decoration:underline;font-weight:bold;">Follow us on Instagram</a>
           &nbsp;|&nbsp;
-          <a href="https://www.facebook.com/meettheagencyllc" target="_blank" style="color:#4267B2; text-decoration:underline; font-weight:bold;">Add us on Facebook</a>
+          <a href="https://www.facebook.com/meettheagencyllc" target="_blank" style="color:#4267B2;text-decoration:underline;font-weight:bold;">Add us on Facebook</a>
           <br>
           <span>Tag <b>@meet_the_agency</b> to get featured!</span>
         </div>
@@ -483,9 +379,9 @@
           <div style="font-style:italic; color:#003399;">Monthly inspo, marketing secrets, and invites to events—straight from your creative business besties. No spam, ever.</div>
         </div>
       </section>
-      <section class="intake-section" id="contact">
-        <h2>Let’s Make Your Vision Real — Your Creative Business Besties Are Here</h2>
-        <form name="project-intake" method="POST" data-netlify="true" class="intake-form">
+      <section class="contact-section" id="contact">
+        <h2>Contact Us</h2>
+        <form name="project-intake" method="POST" data-netlify="true">
           <input type="hidden" name="form-name" value="project-intake">
           <label>Name*<input type="text" name="Name" required></label>
           <label>Email*<input type="email" name="Email" required></label>
@@ -542,14 +438,7 @@
               <option value="Other">Other</option>
             </select>
           </label>
-          <fieldset>
-            <legend>Also interested in:</legend>
-            <label><input type="checkbox" name="Murder Mystery Mingles"> Murder Mystery Mingles (Networking)</label>
-            <label><input type="checkbox" name="Coffee Club"> Coffee Club (Cowork Space)</label>
-            <label><input type="checkbox" name="Newsletter Signup"> New News Newsletter (Monthly Tips)</label>
-          </fieldset>
           <button type="submit">Send My Brief</button>
-          <div class="form-footer">We’ll review and follow up within 1 business day. Your info is private and never shared.</div>
         </form>
       </section>
     </main>
