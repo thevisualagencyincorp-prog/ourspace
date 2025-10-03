@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Agency | Myspace Profile</title>
+  <meta name="viewport" content="width=1024">
+  <meta name="description" content="Bakersfield & LA's creative business besties. Full service advertising agency in the Tehachapi Mountains.">
+  <meta name="keywords" content="Bakersfield advertising agency, LA marketing agency, Tehachapi creative agency, digital marketing, branding, ad campaigns, influencer marketing, California agency, social media ads, creative studio, award-winning advertising, marketing Tehachapi, marketing Bakersfield, advertising LA, creative direction, SEO, content creation, agency portfolio, media buying, brand strategy, monthly creative membership, art department subscription">
+  <meta name="manifesting-wealth" content="88888888">
+  <meta name="manifesting-protection" content="333333">
+  <meta name="manifesting-obsession" content="Clients become superfans.">
+  <style>
+    :root {
+      --myspace-blue: #003399;
+      --myspace-blue-light: #3366cc;
+      --myspace-blue-dark: #002060;
+      --myspace-border: #b5b5b5;
+      --myspace-grey: #e5e5e5;
+      --myspace-white: #fff;
+      --myspace-black: #222;
+      --ad-yellow: #ffcc00;
+    }
+    body {
+      background: var(--myspace-grey);
+      font-family: Verdana, Arial, Helvetica, sans-serif;
+      color: var(--myspace-black);
+      margin: 0;
+      padding: 0;
+    }
+    a { color: var(--myspace-blue); text-decoration: underline; }
+    a:hover { color: var(--myspace-blue-dark); }
+    .myspace-ad-top {
+      width: 1000px;
+      margin: 20px auto 0 auto;
+      text-align: center;
+      z-index: 100;
+    }
+    .myspace-wrapper {
+      width: 1000px;
+      margin: 8px auto 40px auto;
+      background: var(--myspace-white);
+      border: 2px solid var(--myspace-border);
+      box-shadow: 0 0 36px #00339922;
+      display: flex;
+      min-height: 900px;
+    }
+    .profile-sidebar {
+      width: 270px;
+      background: #f5f5f5;
+      border-right: 2px solid var(--myspace-border);
+      padding: 0 0 36px 0;
+    }
+    .profile-header {
+      background: var(--myspace-blue);
+      padding: 18px 0 12px 0;
+      text-align: center;
+      border-bottom: 2px solid var(--myspace-border);
+      margin-bottom: 6px;
+      position:relative;
+    }
+    .profile-avatar {
+      width: 110px;
+      height: 110px;
+      border: 3px solid var(--myspace-grey);
+      border-radius: 8px;
+      box-shadow: 0 4px 16px #00339977;
+      object-fit: cover;
+    }
+    .profile-name {
+      font-size: 1.3em;
+      font-weight: bold;
+      color: var(--myspace-white);
+      margin-top: 9px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-shadow: 0 2px 6px #00339999;
+    }
+    .profile-status {
+      margin: 10px auto 0 auto;
+      display: inline-block;
+      background: #c7e6ff;
+      color: var(--myspace-blue-dark);
+      border: 1px solid var(--myspace-blue);
+      border-radius: 8px;
+      padding: 3px 14px;
+      font-size: 0.98em;
+      font-weight: bold;
+    }
+    .profile-links, .profile-box {
+      margin: 17px auto 0 auto;
+      width: 87%;
+      background: var(--myspace-white);
+      border: 1.5px solid var(--myspace-border);
+      border-radius: 6px;
+      box-shadow: 0 2px 12px #00339922;
+      padding: 12px 13px 9px 13px;
+      font-size: 1em;
+    }
+    .profile-box h3 {
+      margin: 0 0 7px 0;
+      font-size: 1.05em;
+      color: var(--myspace-blue-dark);
+      border-bottom: 1px solid var(--myspace-border);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .profile-sidebar .profile-links a {
+      color: var(--myspace-blue);
+      text-decoration: none;
+      display: inline-block;
+      margin: 0 5px 4px 0;
+      font-weight: bold;
+      font-size: 1em;
+      background: var(--myspace-grey);
+      border: 1px solid var(--myspace-border);
+      border-radius: 4px;
+      padding: 2px 8px;
+      transition: background 0.19s;
+    }
+    .profile-sidebar .profile-links a:hover {
+      background: var(--myspace-blue-light);
+      color: var(--myspace-white);
+    }
+    .profile-edit-btn {
+      display: inline-block;
+      margin: 10px 0 0 0;
+      padding: 2.5px 15px;
+      font-size: 0.94em;
+      background: var(--myspace-grey);
+      color: var(--myspace-blue-dark);
+      border-radius: 6px;
+      border: 1px solid var(--myspace-blue);
+      text-decoration: none;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 6px #00339922;
+    }
+    .profile-edit-btn:hover {
+      background: var(--myspace-blue);
+      color: var(--myspace-white);
+    }
+    .profile-socials {
+      margin-top: 16px;
+      text-align: center;
+    }
+    .profile-socials a {
+      display: inline-block;
+      background: var(--myspace-white);
+      color: var(--myspace-blue);
+      border: 1.5px solid var(--myspace-blue);
+      border-radius: 7px;
+      padding: 5px 14px;
+      text-decoration: none;
+      margin: 2px 3px;
+      font-weight: bold;
+      font-size: 0.97em;
+      transition: background 0.18s;
+    }
+    .profile-socials a:hover {
+      background: var(--myspace-blue-light);
+      color: var(--myspace-white);
+    }
+    .myspace-ad-side {
+      width:160px;
+      margin:18px auto 18px auto;
+      text-align:center;
+    }
+    /* Mood/Bulletin */
+    .mood-bulletin {
+      margin: 16px auto 0 auto;
+      width: 87%;
+      background: #fffbe5;
+      border: 1.5px solid var(--ad-yellow);
+      border-radius: 6px;
+      box-shadow: 0 1px 6px #ffe97a44;
+      padding: 10px 13px 8px 13px;
+      font-size: 1em;
+      color: #a67c00;
+    }
+    /* Online Friends */
+    .online-friends {
+      margin: 17px auto 0 auto;
+      width: 87%;
+      background: #f0fff5;
+      border: 1.5px solid #00cc66;
+      border-radius: 6px;
+      box-shadow: 0 1px 6px #00cc6644;
+      padding: 10px 13px 8px 13px;
+    }
+    .online-friends h3 {
+      margin: 0 0 7px 0;
+      font-size: 1.05em;
+      color: #008844;
+      border-bottom: 1px solid #00cc66;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    /* Main Feed */
+    .main-feed {
+      flex: 1;
+      padding: 38px 32px 24px 32px;
+      background: var(--myspace-white);
+    }
+    .myspace-ad-inline {
+      margin: 28px 0 22px 0;
+      text-align: center;
+    }
+    .feed-nav {
+      margin-bottom: 20px;
+      border-bottom: 2px solid var(--myspace-grey);
+      padding-bottom: 8px;
+      text-align: left;
+    }
+    .feed-nav a {
+      color: var(--myspace-blue);
+      text-decoration: none;
+      margin-right: 18px;
+      font-weight: bold;
+      font-size: 1.06em;
+      padding: 3px 10px;
+      border-radius: 7px;
+      transition: background 0.19s;
+      background: var(--myspace-grey);
+      border: 1px solid var(--myspace-border);
+    }
+    .feed-nav a:hover {
+      background: var(--myspace-blue-light);
+      color: var(--myspace-white);
+    }
+    h2 {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--myspace-blue-dark);
+      margin-bottom: 6px;
+      margin-top: 30px;
+      font-size: 1.3em;
+      border-bottom: 1px solid var(--myspace-grey);
+    }
+    /* Top 8 */
+    .top8-area { margin-bottom: 23px; }
+    .top8-grid {
+      display: flex; flex-wrap: wrap; gap: 14px;
+      margin-bottom: 7px;
+    }
+    .top8-card {
+      width: 108px;
+      background: #f3f8fd;
+      border: 2px solid var(--myspace-blue-light);
+      border-radius: 6px;
+      box-shadow: 0 2px 10px #00339922;
+      text-align: center;
+      padding: 8px 6px 7px 6px;
+      font-size: 0.97em;
+    }
+    .top8-card img {
+      width: 46px; height: 46px; border-radius: 7px;
+      border: 2px solid var(--myspace-grey);
+      box-shadow: 0 1px 6px #00339922;
+      margin-bottom: 4px;
+      object-fit: cover;
+    }
+    .top8-card .username { font-weight: bold; color: var(--myspace-blue); font-size: 1.02em; }
+    .top8-card .tagline { color: #3366cc; font-size: 0.93em; }
+    .top8-card .adbot { color: #ff9900; }
+    /* Wall/Comments */
+    .testimonials-wall {
+      background: #f7fafd;
+      border: 2px dashed var(--myspace-blue);
+      border-radius: 8px;
+      padding: 15px 16px;
+      margin-bottom: 23px;
+      box-shadow: 0 2px 12px #00339922;
+    }
+    .testimonial {
+      border-bottom: 1px dotted var(--myspace-blue-light);
+      margin-bottom: 13px;
+      padding-bottom: 9px;
+      color: #003399;
+      font-size: 1.01em;
+    }
+    .testimonial:last-child { border-bottom: none; }
+    /* Gallery */
+    .gallery-area { margin:38px 0 36px 0; }
+    .gallery-area h2 { color:#003399; border-bottom:1px solid #b5b5b5; font-family:Arial,Helvetica,sans-serif;}
+    .gallery-grid {
+      display:flex; flex-wrap:wrap; gap:22px;
+    }
+    .gallery-card {
+      background:#f3f8fd;
+      border:2px solid #3366cc;
+      border-radius:6px;
+      padding:10px 12px;
+      box-sizing:border-box;
+      margin-bottom:6px;
+    }
+    .gallery-card.video { width:260px; }
+    .gallery-card.logo { width:140px; text-align:center;}
+    .gallery-card.website { width:230px;}
+    .gallery-card.ad { width:210px;}
+    .gallery-card img, .gallery-card iframe {
+      border-radius:5px;
+      margin-bottom:7px;
+      max-width:100%;
+      object-fit:cover;
+    }
+    /* Instagram feed */
+    .insta-section { margin: 36px 0 28px 0; }
+    .insta-header {
+      color: #003399; font-size: 1.12em; font-weight: bold;
+      margin-bottom: 8px; letter-spacing: 1px;
+    }
+    .insta-embed {
+      margin-bottom: 6px; border-radius: 8px; overflow: hidden;
+      box-shadow: 0 2px 12px #00339922;
+      width: 100%; max-width: 480px; min-height: 320px;
+      border: 1.5px solid var(--myspace-blue);
+      background: #fff;
+    }
+    .insta-footer {
+      margin-top: 8px; color: #003399; font-size: 0.98em;
+    }
+    /* Newsletter/Archive */
+    .newsletter-section {
+      background: #f8fafc;
+      border: 2px solid var(--myspace-blue-light);
+      border-radius: 7px;
+      padding: 19px 21px 10px 21px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px #00339922;
+    }
+    .newsletter-section label { color: var(--myspace-blue-dark); font-weight: bold; }
+    .newsletter-section input[type="email"] {
+      padding: 7px;
+      border-radius: 6px;
+      border: 1px solid var(--myspace-blue-light);
+      font-size: 1em;
+      width: 54%;
+      margin-right: 8px;
+      background: #fff;
+    }
+    .newsletter-section button {
+      background: var(--myspace-blue);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 7px 16px;
+      font-size: 1em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.22s;
+    }
+    .newsletter-section button:hover { background: var(--myspace-blue-dark); }
+    .newsletter-archive { margin-top: -10px; margin-bottom: 23px; }
+    .newsletter-archive h4 { color: var(--myspace-blue-dark); margin: 10px 0 6px 0; }
+    .newsletter-archive ul { padding-left: 22px; color: #003399; font-size: 0.98em;}
+    /* Intake Form */
+    .intake-section { margin-bottom: 38px; }
+    .intake-form label {
+      display: block; margin-bottom: 10px; font-size: 1em; color: #003399;
+    }
+    .intake-form input[type="text"], .intake-form input[type="email"], .intake-form input[type="url"], .intake-form input[type="date"], .intake-form textarea, .intake-form select {
+      width: 88%; padding: 6px; margin-top: 3px; margin-bottom: 7px;
+      border-radius: 5px; border: 1px solid var(--myspace-blue-light);
+      font-size: 1em; background: #f7fafd;
+    }
+    .intake-form textarea { min-height: 44px; }
+    .intake-form button {
+      background: var(--myspace-blue);
+      color: #fff;
+      padding: 8px 24px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1.1em;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 8px;
+      transition: background 0.2s;
+    }
+    .intake-form button:hover { background: var(--myspace-blue-dark); }
+    .intake-form fieldset { border:none; margin: 10px 0 6px 0; padding:0;}
+    .intake-form legend { font-weight: bold; color: var(--myspace-blue); }
+    .form-footer {
+      margin-top: 8px;
+      font-size: 0.96em;
+      color: var(--myspace-blue-dark);
+    }
+    /* Blinky */
+    .blinky {
+      display:block;
+      margin:16px auto 0 auto;
+      width:110px;
+    }
+    @media (max-width: 1150px) {
+      .myspace-wrapper, .myspace-ad-top { width: 100vw;}
+    }
+    @media (max-width: 900px) {
+      .myspace-wrapper { flex-direction: column; border-radius: 0; }
+      .profile-sidebar { width: 100vw; border-right: none; border-bottom: 2px solid var(--myspace-border);}
+      .main-feed { padding: 22px 4vw 24px 4vw; }
+    }
+    @media (max-width: 600px) {
+      .main-feed { padding: 9px 2vw 18px 2vw; }
+      .top8-grid { gap: 9px; }
+      .top8-card { width: 95px; }
+      .newsletter-section, .newsletter-archive, .testimonials-wall { padding: 10px 7px; }
+      .gallery-grid { gap: 12px; }
+      .gallery-card { width: 98vw!important; min-width:0; }
+    }
+  </style>
+  <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+</head>
+<body>
+  <!-- Top Banner Ad -->
+  <div class="myspace-ad-top">
+    <a href="https://youragencyadlink.com" target="_blank">
+      <img src="https://images.unsplash.com/photo-1482062364825-616fd23b8fc1?auto=format&fit=crop&w=728&q=80" alt="Top Banner Ad" style="border:2px solid #003399; border-radius:5px; width:728px; height:90px; object-fit:cover;">
+    </a>
+  </div>
+<div class="myspace-wrapper">
+  <!-- Sidebar/Profile -->
+  <aside class="profile-sidebar">
+    <!-- Sidebar Skyscraper Ad -->
+    <div class="myspace-ad-side">
+      <a href="https://youragencyadlink.com" target="_blank">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=160&q=80" alt="Sidebar Ad" style="border:2px solid #3366cc; border-radius:5px; width:160px; height:600px; object-fit:cover;">
+      </a>
+    </div>
+    <div class="profile-header">
+      <img class="profile-avatar" src="image1" alt="The Agency Profile Photo" />
+      <div class="profile-name">THE AGENCY</div>
+      <div class="profile-status">● Online Now!</div>
+      <a href="#contact" class="profile-edit-btn">Edit Profile</a>
+    </div>
+    <div class="profile-links">
+      <a href="#top8">Top 8</a>
+      <a href="#wall">Wall</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#instagram">Instagram</a>
+      <a href="#newsletter">Newsletter</a>
+      <a href="#contact">Contact</a>
+      <a href="https://the-visual-archive.com/" target="_blank">Visual Archive</a>
+    </div>
+    <div class="blinky">
+      <img src="https://media.giphy.com/media/9J7tdYltWyXIY/giphy.gif" alt="Under Construction" style="width:110px;">
+    </div>
+    <div class="profile-box">
+      <h3>About</h3>
+      <p>Full service advertising agency in the Tehachapi Mountains, serving Bakersfield, LA, & beyond.<br>
+      Your creative business besties. Results, not just ideas.</p>
+    </div>
+    <div class="mood-bulletin">
+      <div style="margin-bottom:6px;">
+        <img src="https://media.giphy.com/media/1BdIPqBrt1Eoy/giphy.gif" alt="Mood" style="vertical-align:middle; width:24px; height:24px;">
+        <span style="color:#003399;font-weight:bold;">Feeling: Inspired to create.</span>
+      </div>
+      <b>Bulletin:</b> New case study dropped! <a href="#gallery" style="color:#003399;">See our viral ad work</a>.
+    </div>
+    <div class="profile-box">
+      <h3>Manifesto</h3>
+      <ul style="padding-left:18px; margin:0;">
+        <li>🌄 Local heart, global hustle.</li>
+        <li>💡 Big ideas, bigger results.</li>
+        <li>🦄 Manifest magic, protect the vision.</li>
+        <li>🚀 Abundance only—no budget fear here!</li>
+      </ul>
+    </div>
+    <div class="profile-box">
+      <h3>Contact</h3>
+      <p>Email: <a href="mailto:hello@agency.com">hello@agency.com</a><br>
+      DM: <a href="https://instagram.com/meet_the_agency" target="_blank">@meet_the_agency</a>
+      </p>
+    </div>
+    <div class="online-friends">
+      <h3>Online Friends</h3>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;">
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=32&q=80" style="width:32px;height:32px;border-radius:6px;border:1.5px solid #00cc66;">
+        <img src="https://images.unsplash.com/photo-1508214751196-bc89e2bee139?auto=format&fit=crop&w=32&q=80" style="width:32px;height:32px;border-radius:6px;border:1.5px solid #00cc66;">
+        <img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=32&q=80" style="width:32px;height:32px;border-radius:6px;border:1.5px solid #00cc66;">
+        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=32&q=80" style="width:32px;height:32px;border-radius:6px;border:1.5px solid #00cc66;">
+      </div>
+      <div style="font-size:0.9em;color:#00cc66;margin-top:4px;">4 friends online now</div>
+    </div>
+    <div class="profile-box profile-socials">
+      <a href="https://instagram.com/meet_the_agency" target="_blank">Instagram</a>
+      <a href="https://www.facebook.com/meettheagencyllc" target="_blank">Facebook</a>
+      <a href="https://the-visual-archive.com/" target="_blank">Visual Archive</a>
+    </div>
+    <div style="display:none">
+      <!-- 88888888 Wealth | 333333 Protection | Obsession: Clients become superfans -->
+    </div>
+  </aside>
+  <!-- Main Feed -->
+  <main class="main-feed">
+    <nav class="feed-nav">
+      <a href="#top8">Top 8</a>
+      <a href="#wall">Wall</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#instagram">Instagram</a>
+      <a href="#newsletter">Newsletter</a>
+      <a href="#contact">Contact</a>
+      <a href="https://the-visual-archive.com/" target="_blank">Visual Archive</a>
+    </nav>
+    <section id="top8" class="top8-area">
+      <h2>Top 8 Friends & Collaborators</h2>
+      <div class="top8-grid">
+        <div class="top8-card">
+          <img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=46&q=80" alt="Jessica R.">
+          <div class="username">brandboss_jess</div>
+          <div class="tagline">“You made us unforgettable.”</div>
+        </div>
+        <div class="top8-card">
+          <img src="https://images.unsplash.com/photo-1508214751196-bc89e2bee139?auto=format&fit=crop&w=46&q=80" alt="Eli M.">
+          <div class="username">kerncountykingpin</div>
+          <div class="tagline">“Bakersfield’s buzz-makers!”</div>
+        </div>
+        <div class="top8-card">
+          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=46&q=80" alt="Zoe W.">
+          <div class="username">adwizard_zoe</div>
+          <div class="tagline">“Never seen creative like this.”</div>
+        </div>
+        <div class="top8-card">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=46&q=80" alt="Tyler S.">
+          <div class="username">socialsavant_ty</div>
+          <div class="tagline">“TikTok went wild.”</div>
+        </div>
+        <div class="top8-card">
+          <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=46&q=80" alt="Maya L.">
+          <div class="username">LA_creativequeen</div>
+          <div class="tagline">“You just get LA brands.”</div>
+        </div>
+        <div class="top8-card">
+          <img src="https://images.unsplash.com/photo-1482062364825-616fd23b8fc1?auto=format&fit=crop&w=46&q=80" alt="Emily F.">
+          <div class="username">mountainmuse_em</div>
+          <div class="tagline">“Fresh, local, and innovative.”</div>
+        </div>
+        <div class="top8-card">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=46&q=80" alt="Rico V.">
+          <div class="username">vidvibes_rico</div>
+          <div class="tagline">“Our campaign converted!”</div>
+        </div>
+        <div class="top8-card">
+          <img src="https://images.unsplash.com/photo-1519985176271-adb1088fa94c?auto=format&fit=crop&w=46&q=80" alt="Ari P.">
+          <div class="username">pixelpal_ari</div>
+          <div class="tagline">“Always two steps ahead.”</div>
+        </div>
+        <!-- Sponsored Friend AdBot -->
+        <div class="top8-card">
+          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=46&q=80" alt="Sponsored">
+          <div class="username adbot">Myspace AdBot</div>
+          <div class="tagline adbot">Sponsored - Your Brand Here!</div>
+        </div>
+      </div>
+    </section>
+    <section id="wall" class="testimonials-wall">
+      <h2>Wall: Client Reviews</h2>
+      <div class="testimonial"><strong>Jessica R. (brandboss_jess):</strong> The Agency helped us tell our story in a way that actually connects. We’re getting the right kind of attention now.</div>
+      <div class="testimonial"><strong>Eli M. (kerncountykingpin):</strong> They just get Bakersfield. Our campaign results were beyond what we expected—real growth, real people engaged.</div>
+      <div class="testimonial"><strong>Zoe W. (adwizard_zoe):</strong> Smart strategy, creative that stands out, and a team that’s genuinely fun to work with. Highly recommend.</div>
+      <div class="testimonial"><strong>Tyler S. (socialsavant_ty):</strong> We wanted relevance and reach, and The Agency delivered both. We’re still trending on socials!</div>
+      <div class="testimonial"><strong>Maya L. (LA_creativequeen):</strong> LA is saturated, but you made us feel fresh. The collab was seamless start to finish.</div>
+      <div class="testimonial"><strong>Emily F. (mountainmuse_em):</strong> Designs that finally reflect our vibe—and the process was easy and personal.</div>
+      <div class="testimonial"><strong>Rico V. (vidvibes_rico):</strong> Our product video broke our own sales record. They made it happen.</div>
+      <div class="testimonial"><strong>Ari P. (pixelpal_ari):</strong> Site launches are usually stressful, but this one? Actually fun. Thanks!</div>
+    </section>
+    <!-- GALLERY START -->
+    <section id="gallery" class="gallery-area">
+      <h2>Gallery: Our Work</h2>
+      <div class="gallery-grid">
+        <div class="gallery-card video">
+          <div style="width:100%; aspect-ratio:16/9; background:#e5e5e5; margin-bottom:7px;">
+            <iframe width="100%" height="150" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video ad example" frameborder="0" allowfullscreen style="border-radius:5px;"></iframe>
+          </div>
+          <div style="font-weight:bold; color:#003399;">Brand Ad Campaign</div>
+          <div style="font-size:0.98em; color:#3366cc;">30s video ad for a regional launch. Result: 3M+ impressions.</div>
+        </div>
+        <div class="gallery-card logo">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=70&q=80" alt="Logo Example" style="max-width:70px; margin-bottom:6px;">
+          <div style="font-weight:bold; color:#003399;">Client Logo</div>
+          <div style="font-size:0.96em; color:#3366cc;">Full identity redesign, 2025.</div>
+        </div>
+        <div class="gallery-card website">
+          <a href="https://the-visual-archive.com/" target="_blank" style="text-decoration:none;">
+            <img src="https://images.unsplash.com/photo-1482062364825-616fd23b8fc1?auto=format&fit=crop&w=210&q=80" alt="Website Screenshot">
+          </a>
+          <div style="font-weight:bold; color:#003399;">Website Design</div>
+          <div style="font-size:0.98em; color:#3366cc;">Custom WordPress site for an art collective.</div>
+        </div>
+        <div class="gallery-card ad">
+          <img src="https://images.unsplash.com/photo-1519985176271-adb1088fa94c?auto=format&fit=crop&w=180&q=80" alt="Ad Preview">
+          <div style="font-weight:bold; color:#003399;">Social Media Ad</div>
+          <div style="font-size:0.97em; color:#3366cc;">Animated Instagram story ad for product launch.</div>
+        </div>
+      </div>
+      <div style="margin-top:18px; color:#003399; font-size:1.04em;">
+        Want to see more? <a href="https://the-visual-archive.com/" target="_blank" style="color:#3366cc; font-weight:bold;">Visit The Visual Archive →</a>
+      </div>
+    </section>
+    <!-- GALLERY END -->
+    <!-- Inline Ad Between Content -->
+    <div class="myspace-ad-inline">
+      <a href="https://youragencyadlink.com" target="_blank">
+        <img src="https://images.unsplash.com/photo-1519985176271-adb1088fa94c?auto=format&fit=crop&w=300&q=80" alt="Inline Ad" style="border:2px solid #3366cc; border-radius:5px; width:300px; height:250px; object-fit:cover;">
+      </a>
+    </div>
+    <section id="instagram" class="insta-section">
+      <div class="insta-header">Our Latest on <span style="color:#003399;">@meet_the_agency</span></div>
+      <!-- LightWidget Instagram Embed -->
+      <div class="insta-embed" style="padding:0;">
+        <iframe src="//lightwidget.com/widgets/1788fd5e4a325672bbbd7c5c16fe85e3.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+      </div>
+      <div class="insta-footer">
+        <a href="https://instagram.com/meet_the_agency" target="_blank" style="color:#003399; text-decoration:underline; font-weight:bold;">Follow us on Instagram</a>
+        &nbsp;|&nbsp;
+        <a href="https://www.facebook.com/meettheagencyllc" target="_blank" style="color:#4267B2; text-decoration:underline; font-weight:bold;">Add us on Facebook</a>
+        <br>
+        <span>Tag <b>@meet_the_agency</b> to get featured!</span>
+      </div>
+    </section>
+    <section class="newsletter-section" id="newsletter">
+      <h2>Get the New News</h2>
+      <form name="newsletter-signup" method="POST" data-netlify="true">
+        <label for="newsletter-email" style="display:none;">Email</label>
+        <input type="hidden" name="form-name" value="newsletter-signup">
+        <input type="email" id="newsletter-email" name="Newsletter Email" placeholder="Your email for monthly inspo" required>
+        <button type="submit">Sign Me Up</button>
+      </form>
+      <div class="newsletter-preview" style="margin-top:10px;">
+        <strong>Previous Hot Topics:</strong>
+        <ul>
+          <li>How to Make Your Brand Unforgettable</li>
+          <li>Social Media Trends That Actually Work (2025 Edition)</li>
+          <li>Manifesting Clients: Real Rituals, Real Results</li>
+          <li>Design Mistakes to Avoid in 2025</li>
+          <li>Campaigns That Blew Up: Our Most Viral Moments</li>
+        </ul>
+        <div style="font-style:italic; color:#003399;">Monthly inspo, marketing secrets, and invites to events—straight from your creative business besties. No spam, ever.</div>
+      </div>
+    </section>
+    <section class="newsletter-archive">
+      <h4>Newsletter Archive</h4>
+      <ul>
+        <li><strong>How to Make Your Brand Unforgettable</strong> — Storytelling strategies & visual secrets from top campaigns. <span style="color:#a59dc1;">(Sept 2025)</span></li>
+        <li><strong>Social Media Trends That Actually Work</strong> — What’s hot in 2025—plus what to skip. <span style="color:#a59dc1;">(Aug 2025)</span></li>
+        <li><strong>Manifesting Clients: Real Rituals, Real Results</strong> — How our team and clients set intentions for creative wins. <span style="color:#a59dc1;">(July 2025)</span></li>
+        <li><strong>Design Mistakes to Avoid in 2025</strong> — Common pitfalls and how to keep your look ahead of the curve. <span style="color:#a59dc1;">(June 2025)</span></li>
+        <li><strong>Campaigns That Blew Up</strong> — Our most viral moments, lessons, and what we’d do again. <span style="color:#a59dc1;">(May 2025)</span></li>
+      </ul>
+    </section>
+    <section class="intake-section" id="contact">
+      <h2>Let’s Make Your Vision Real — Your Creative Business Besties Are Here</h2>
+      <form name="project-intake" method="POST" data-netlify="true" class="intake-form">
+        <input type="hidden" name="form-name" value="project-intake">
+        <label>Name*<input type="text" name="Name" required></label>
+        <label>Email*<input type="email" name="Email" required></label>
+        <label>Brand or Company<input type="text" name="Brand"></label>
+        <label>What do you want to create?<br>
+          <textarea name="Project Goals" placeholder="Tell us your vision, big or small."></textarea>
+        </label>
+        <label>How would you describe your business vibe?<br>
+          <select name="Vibe">
+            <option value="Fun">Fun</option>
+            <option value="Bold">Bold</option>
+            <option value="Classic">Classic</option>
+            <option value="Edgy">Edgy</option>
+            <option value="Down to Earth">Down to Earth</option>
+            <option value="Other">Other (type below)</option>
+          </select>
+          <input type="text" name="Custom Vibe" placeholder="Your words, your vibe">
+        </label>
+        <label>Color Palette (pick or describe your faves)<br>
+          <input type="color" name="Color1">
+          <input type="color" name="Color2">
+          <input type="color" name="Color3">
+          <input type="color" name="Color4">
+          <input type="text" name="Color Desc" placeholder="Describe, hex code, or link a palette">
+        </label>
+        <label>Inspiration<br>
+          <input type="url" name="Inspo Link 1" placeholder="Pinterest, IG, etc.">
+          <input type="url" name="Inspo Link 2">
+          <input type="file" name="Inspo Upload" accept="image/*">
+        </label>
+        <label>Who’s your competition?<br>
+          <input type="text" name="Competition" placeholder="Names or links">
+        </label>
+        <label>Your budget range<br>
+          <select name="Budget">
+            <option value="Under $5k">Under $5k</option>
+            <option value="$5k–$15k">$5k–$15k</option>
+            <option value="$15k–$50k">$15k–$50k</option>
+            <option value="$50k+">$50k+</option>
+          </select>
+        </label>
+        <label>Timeline/launch date<br>
+          <input type="date" name="Launch Date">
+        </label>
+        <label>Anything you want us to avoid?<br>
+          <input type="text" name="No Gos" placeholder="Colors, styles, words, whatever!">
+        </label>
+        <label>How did you hear about us?<br>
+          <select name="How Found">
+            <option value="Referral">Referral</option>
+            <option value="Social Media">Social Media</option>
+            <option value="Google/Search">Google/Search</option>
+            <option value="Event">Event</option>
+            <option value="Other">Other</option>
+          </select>
+        </label>
+        <fieldset>
+          <legend>Also interested in:</legend>
+          <label><input type="checkbox" name="Murder Mystery Mingles"> Murder Mystery Mingles (Networking)</label>
+          <label><input type="checkbox" name="Coffee Club"> Coffee Club (Cowork Space)</label>
+          <label><input type="checkbox" name="Newsletter Signup"> New News Newsletter (Monthly Tips)</label>
+        </fieldset>
+        <button type="submit">Send My Brief</button>
+        <div class="form-footer">We’ll review and follow up within 1 business day. Your info is private and never shared.</div>
+      </form>
+    </section>
+  </main>
+</div>
+</body>
+</html>
