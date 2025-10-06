@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <defs>
+    <linearGradient id="grad-bo" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F39C12" />
+      <stop offset="100%" stop-color="#D35400" />
+    </linearGradient>
+  </defs>
+  <rect width="48" height="48" rx="6" fill="url(#grad-bo)" />
+  <text x="24" y="29" font-family="Tahoma, Arial, sans-serif" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">BO</text>
+</svg>
