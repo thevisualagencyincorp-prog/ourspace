@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>The Agency | Myspace</title>
-  <meta name="viewport" content="width=1024, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Bakersfield & LA's creative business besties. Full-service advertising + branding studio in the Tehachapi Mountains. Strategy, design, photo/video & campaigns that convert." />
   <meta name="theme-color" content="#003399" />
   <meta property="og:title" content="The Agency — Creative Business Besties" />
@@ -19,6 +19,21 @@
   <link rel="preconnect" href="https://lightwidget.com" />
   <link rel="dns-prefetch" href="https://lightwidget.com" />
   <style>
+    .newsletter-description {
+      font-style: italic;
+      color: #003399;
+    }
+    .no-underline {
+      text-decoration: none;
+    }
+    .insta-link {
+      color: #003399;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+    .newsletter-email-label {
+      display: none;
+    }
     body {
       background: url('https://i.imgur.com/2T1QXOJ.png') repeat-x #d6e0ef;
       font-family: Verdana, Arial, Helvetica, sans-serif;
@@ -26,6 +41,10 @@
       color: #222;
       margin: 0;
       padding: 0;
+    }
+    .sidebar-link {
+      margin: 5px 0;
+      display: inline-block;
     }
     #wrap {
       width: 990px;
@@ -91,6 +110,18 @@
       background: #f7fafd;
       border-right: 1px solid #b5b5b5;
       padding: 18px 0;
+    }
+    .online-friend-img {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      border: 1px solid #00cc66;
+    }
+    .sidebar-friend-img {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      border: 1px solid #00cc66;
     }
     .sidebar-section {
       margin: 0 auto 14px auto;
@@ -171,6 +202,7 @@
       width: 100%; max-width: 440px; min-height: 320px;
       border: 1px solid #003399;
       background: #fff;
+      padding: 0;
     }
     .insta-footer {
       margin-top: 8px; color: #003399; font-size: 0.98em;
@@ -275,22 +307,22 @@
       </div>
       <div class="sidebar-section">
         <h3>Contact</h3>
-        Email: <a href="mailto:hello@agency.com">hello@agency.com</a><br>
-        DM: <a href="https://instagram.com/meet_the_agency" target="_blank">@meet_the_agency</a>
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=32&q=80" class="sidebar-friend-img" alt="Online friend: Jessica R." title="Online friend: Jessica R.">
+        DM: <a href="https://instagram.com/meet_the_agency" target="_blank" rel="noopener">@meet_the_agency</a>
       </div>
       <div class="sidebar-section">
         <h3>Online Friends</h3>
         <div style="display:flex;flex-wrap:wrap;gap:8px;">
-          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=32&q=80" style="width:32px;height:32px;border-radius:6px;border:1px solid #00cc66;">
-          <img src="https://images.unsplash.com/photo-1508214751196-bc89e2bee139?auto=format&fit=crop&w=32&q=80" style="width:32px;height:32px;border-radius:6px;border:1px solid #00cc66;">
-          <img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=32&q=80" style="width:32px;height:32px;border-radius:6px;border:1px solid #00cc66;">
-          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=32&q=80" style="width:32px;height:32px;border-radius:6px;border:1px solid #00cc66;">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=32&q=80" class="sidebar-friend-img" alt="Online friend: Jessica R." title="Online friend: Jessica R.">
+          
+          
+          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=32&q=80" class="sidebar-friend-img" alt="Online friend: Alex T." title="Online friend: Alex T.">
         </div>
-        <div style="font-size:0.9em;color:#00cc66;margin-top:4px;">4 friends online now</div>
+        <a href="https://www.facebook.com/meettheagencyllc" target="_blank" rel="noopener" class="sidebar-link">Facebook</a>
       </div>
       <div class="sidebar-section" style="text-align:center;">
-        <a href="https://instagram.com/meet_the_agency" target="_blank" style="margin:5px 0;display:inline-block;">Instagram</a>
-        <a href="https://www.facebook.com/meettheagencyllc" target="_blank" style="margin:5px 0;display:inline-block;">Facebook</a>
+        
+        <aa href="https://www.facebook.com/meettheagencyllc" target="_blank" rel="noopener" class="sidebar-link">Facebook</a>
         <a href="https://the-visual-archive.com/" target="_blank" style="margin:5px 0;display:inline-block;">Visual Archive</a>
       </div>
       <div class="blinky">
@@ -322,9 +354,9 @@
           <div class="gallery-card logo">
             <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=70&q=80" alt="Logo Example" style="max-width:70px; margin-bottom:6px;">
             <div style="font-weight:bold; color:#003399;">Client Logo</div>
-            <div style="font-size:0.96em; color:#3366cc;">Full identity redesign, 2025.</div>
-          </div>
-          <div class="gallery-card website">
+            <a href="https://the-visual-archive.com/" target="_blank" rel="noopener" class="no-underline">
+              <img src="https://images.unsplash.com/photo-1482062364825-616fd23b8fc1?auto=format&fit=crop&w=210&q=80" alt="Website Screenshot">
+            </a>
             <a href="https://the-visual-archive.com/" target="_blank" style="text-decoration:none;">
               <img src="https://images.unsplash.com/photo-1482062364825-616fd23b8fc1?auto=format&fit=crop&w=210&q=80" alt="Website Screenshot">
             </a>
@@ -342,27 +374,27 @@
         </div>
       </section>
       <section id="instagram" class="insta-section">
-        <div class="insta-header">Our Latest on <span style="color:#003399;">@meet_the_agency</span></div>
+        <div class="insta-embed">
         <div class="insta-embed" style="padding:0;">
           <iframe src="https://lightwidget.com/widgets/1788fd5e4a325672bbbd7c5c16fe85e3.html"
             title="Instagram feed"
             scrolling="no"
-            allowtransparency="true"
+          <a href="https://instagram.com/meet_the_agency" target="_blank" rel="noopener" class="insta-link">Follow us on Instagram</a>
             class="lightwidget-widget"
             style="width:100%;height:540px;border:0;overflow:hidden"></iframe>
         </div>
         <div class="insta-footer">
-          <a href="https://instagram.com/meet_the_agency" target="_blank" style="color:#003399;text-decoration:underline;font-weight:bold;">Follow us on Instagram</a>
+          <a href="https://instagram.com/meet_the_agency" target="_blank" rel="noopener" class="insta-link">Follow us on Instagram</a>
           &nbsp;|&nbsp;
           <a href="https://www.facebook.com/meettheagencyllc" target="_blank" style="color:#4267B2;text-decoration:underline;font-weight:bold;">Add us on Facebook</a>
           <br>
           <span>Tag <b>@meet_the_agency</b> to get featured!</span>
         </div>
       </section>
-      <section class="newsletter-section" id="newsletter">
+      <section class="newsletter-section">
         <h2>Get the New News</h2>
         <form name="newsletter-signup" method="POST" data-netlify="true">
-          <label for="newsletter-email" style="display:none;">Email</label>
+          <label for="newsletter-email" class="newsletter-email-label">Email</label>
           <input type="hidden" name="form-name" value="newsletter-signup">
           <input type="email" id="newsletter-email" name="Newsletter Email" placeholder="Your email for monthly inspo" required>
           <button type="submit">Sign Me Up</button>
@@ -372,11 +404,10 @@
           <ul>
             <li>How to Make Your Brand Unforgettable</li>
             <li>Social Media Trends That Actually Work (2025 Edition)</li>
-            <li>Manifesting Clients: Real Rituals, Real Results</li>
             <li>Design Mistakes to Avoid in 2025</li>
             <li>Campaigns That Blew Up: Our Most Viral Moments</li>
           </ul>
-          <div style="font-style:italic; color:#003399;">Monthly inspo, marketing secrets, and invites to events—straight from your creative business besties. No spam, ever.</div>
+          <div class="newsletter-description">Monthly inspo, marketing secrets, and invites to events—straight from your creative business besties. No spam, ever.</div>
         </div>
       </section>
       <section class="contact-section" id="contact">
