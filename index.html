@@ -137,6 +137,20 @@
       padding-bottom: 9px;
       color: #003399;
       font-size: 0.99em;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .testimonial-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 8px;
+      border: 2px solid #3366cc;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+    .testimonial-content {
+      flex: 1;
     }
     .testimonial:last-child { border-bottom: none; }
     .gallery-area { margin:30px 0 24px 0; }
@@ -240,8 +254,8 @@
 <div id="wrap">
   <div id="profile-header">
     <div id="profile-pic-col">
-      <a href="theagencyprofile.jpg" target="_blank">
-        <img id="profile-pic" src="theagencyprofile.jpg" alt="The Agency Profile Photo" />
+      <a href="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=400&q=80" target="_blank">
+        <img id="profile-pic" src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=400&q=80" alt="The Agency Profile Photo" />
       </a>
     </div>
     <div id="profile-info">
@@ -300,14 +314,38 @@
     <main id="main-feed">
       <section id="wall" class="testimonials-wall">
         <h2>Wall: Client Reviews</h2>
-        <div class="testimonial"><strong>Jessica R. (brandboss_jess):</strong> The Agency helped us tell our story in a way that actually connects. We’re getting the right kind of attention now.</div>
-        <div class="testimonial"><strong>Eli M. (kerncountykingpin):</strong> They just get Bakersfield. Our campaign results were beyond what we expected—real growth, real people engaged.</div>
-        <div class="testimonial"><strong>Zoe W. (adwizard_zoe):</strong> Smart strategy, creative that stands out, and a team that’s genuinely fun to work with. Highly recommend.</div>
-        <div class="testimonial"><strong>Tyler S. (socialsavant_ty):</strong> We wanted relevance and reach, and The Agency delivered both. We’re still trending on socials!</div>
-        <div class="testimonial"><strong>Maya L. (LA_creativequeen):</strong> LA is saturated, but you made us feel fresh. The collab was seamless start to finish.</div>
-        <div class="testimonial"><strong>Emily F. (mountainmuse_em):</strong> Designs that finally reflect our vibe—and the process was easy and personal.</div>
-        <div class="testimonial"><strong>Rico V. (vidvibes_rico):</strong> Our product video broke our own sales record. They made it happen.</div>
-        <div class="testimonial"><strong>Ari P. (pixelpal_ari):</strong> Site launches are usually stressful, but this one? Actually fun. Thanks!</div>
+        <div class="testimonial">
+          <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Jessica R. profile">
+          <div class="testimonial-content"><strong>Jessica R. (brandboss_jess):</strong> The Agency helped us tell our story in a way that actually connects. We're getting the right kind of attention now.</div>
+        </div>
+        <div class="testimonial">
+          <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="Eli M. profile">
+          <div class="testimonial-content"><strong>Eli M. (kerncountykingpin):</strong> They just get Bakersfield. Our campaign results were beyond what we expected—real growth, real people engaged.</div>
+        </div>
+        <div class="testimonial">
+          <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&q=80" alt="Zoe W. profile">
+          <div class="testimonial-content"><strong>Zoe W. (adwizard_zoe):</strong> Smart strategy, creative that stands out, and a team that's genuinely fun to work with. Highly recommend.</div>
+        </div>
+        <div class="testimonial">
+          <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" alt="Tyler S. profile">
+          <div class="testimonial-content"><strong>Tyler S. (socialsavant_ty):</strong> We wanted relevance and reach, and The Agency delivered both. We're still trending on socials!</div>
+        </div>
+        <div class="testimonial">
+          <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" alt="Maya L. profile">
+          <div class="testimonial-content"><strong>Maya L. (LA_creativequeen):</strong> LA is saturated, but you made us feel fresh. The collab was seamless start to finish.</div>
+        </div>
+        <div class="testimonial">
+          <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Emily F. profile">
+          <div class="testimonial-content"><strong>Emily F. (mountainmuse_em):</strong> Designs that finally reflect our vibe—and the process was easy and personal.</div>
+        </div>
+        <div class="testimonial">
+          <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=100&q=80" alt="Rico V. profile">
+          <div class="testimonial-content"><strong>Rico V. (vidvibes_rico):</strong> Our product video broke our own sales record. They made it happen.</div>
+        </div>
+        <div class="testimonial">
+          <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=100&q=80" alt="Ari P. profile">
+          <div class="testimonial-content"><strong>Ari P. (pixelpal_ari):</strong> Site launches are usually stressful, but this one? Actually fun. Thanks!</div>
+        </div>
       </section>
       <section id="gallery" class="gallery-area">
         <h2>Gallery: Our Work</h2>
